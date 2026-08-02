@@ -1,3 +1,6 @@
+const catElement = document.querySelector(".cat");
+const printCatBtnEl = catElement.querySelector(".print-cat-btn");
+
 const cat = {
     name: "Murka",
     color: "black",
@@ -15,4 +18,6 @@ function printObj(obj) {
     }
 }
 
-printObj(cat);
+printCatBtnEl.addEventListener("click", () => {
+    printObj(cat);
+});
