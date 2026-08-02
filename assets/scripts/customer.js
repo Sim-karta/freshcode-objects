@@ -28,4 +28,6 @@ customer.isMale = function () {
     return this.gender === "male" ? "male" : "female";
 };
 
+delete customer.address;
+
 console.log(customer);
