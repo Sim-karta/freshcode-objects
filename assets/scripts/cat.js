@@ -7,7 +7,11 @@ const cat = {
 
 function printObj(obj) {
     for (key in obj) {
-        console.log(`${key} - ${obj[key]}`);
+        if (typeof obj[key] === "boolean") {
+            console.log(`${key} - ${obj[key] ? "так" : "ні"}`);
+        } else {
+            console.log(`${key} - ${obj[key]}`);
+        }
     }
 }
 
