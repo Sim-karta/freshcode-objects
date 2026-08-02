@@ -30,4 +30,10 @@ customer.isMale = function () {
 
 delete customer.address;
 
-console.log(customer);
+console.log("Customer >> ", customer);
+
+const newCustomer = Object.assign(customer);
+const customer1 = { ...customer };
+
+console.log("newCustomer >> ", newCustomer);
+console.log("customer1 >> ", customer1);
