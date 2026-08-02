@@ -34,7 +34,7 @@ const customer = {
 };
 
 customer.isMale = function () {
-    return this.gender === "male" ? "male" : "female";
+    return this.gender;
 };
 
 const newCustomer = Object.assign({}, customer);
