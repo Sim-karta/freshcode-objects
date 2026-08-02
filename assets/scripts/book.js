@@ -1,3 +1,10 @@
+const bookElement = document.querySelector(".book");
+const printBookBtnEl = bookElement.querySelector(".print-book-btn");
+const printBookAgeBtnEl = bookElement.querySelector(".print-book-age-btn");
+const changeBookPriceBtnEl = bookElement.querySelector(
+    ".change-book-price-btn",
+);
+
 function Book(author, title, publishYear, publishCity, publishName, price) {
     this.author = author;
     this.title = title;
@@ -32,10 +39,14 @@ const book1 = new Book(
     1200,
 );
 
-console.log(book1);
+printBookBtnEl.addEventListener("click", () => {
+    console.log(book1);
+});
 
-console.log(book1.calcAge());
+printBookAgeBtnEl.addEventListener("click", () => {
+    console.log(book1.calcAge());
+});
 
-book1.changePrice(1500);
-
-console.log(book1);
+changeBookPriceBtnEl.addEventListener("click", () => {
+    book1.changePrice(prompt("Введіть нову ціну"));
+});
