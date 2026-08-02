@@ -24,4 +24,8 @@ const customer = {
     },
 };
 
+customer.isMale = function () {
+    return this.gender === "male" ? "male" : "female";
+};
+
 console.log(customer);
